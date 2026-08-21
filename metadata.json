@@ -1,0 +1,6 @@
+{
+  "name": "Quick Bite",
+  "description": "Smart food discovery and delivery platform for Thiruvananthapuram District, Kerala with personalized recommendations, lifestyle filters, meal builder, and interactive discovery.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
