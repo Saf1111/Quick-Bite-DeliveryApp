@@ -301,6 +301,12 @@ Check the system information:
 
 <a id="iam-role-and-aws-permissions"></a>
 
+![EKS Cluster Setup](screenshots/01-eks-cluster-created.png)
+
+![EKS Nodes](screenshots/02-eks-nodes.png)
+
+![System Pods](screenshots/03-system-pods.png)
+
 ## 🔐 IAM Role and AWS Permissions
 
 The EC2 instance needs permission to access AWS services such as EKS.
@@ -503,6 +509,8 @@ The Quick-Bite image should appear with the following name:
 
 <a id="test-the-docker-container"></a>
 
+![Docker Image](screenshots/04-docker-image.png)
+
 ## 🧪 Test the Docker Container
 
 Before deploying the application to Kubernetes, test the Docker image locally on the EC2 instance.
@@ -579,6 +587,8 @@ The Kubernetes Deployment will use this Docker Hub image later.
 
 <a id="jenkins-setup"></a>
 
+![Docker Hub](screenshots/05-docker-hub-push.png)
+
 ## 🔧 Jenkins Setup
 
 Jenkins is used to automate the application build and deployment process.
@@ -649,6 +659,8 @@ Jenkins will checkout the repository and execute the stages defined in the `Jenk
 The pipeline should complete successfully before moving to the Kubernetes deployment.
 
 <a id="jenkinsfile"></a>
+
+![Jenkins Setup](screenshots/06-jenkins-dashboard.png)
 
 ## 📄 Jenkinsfile
 
@@ -782,6 +794,8 @@ The application should return a response from the running container.
 
 <a id="aws-eks-cluster-setup"></a>
 
+![Jenkins Pipeline](screenshots/07-jenkins-pipeline-success.png)
+
 ## ☸️ AWS EKS Cluster Setup
 
 Amazon EKS (Elastic Kubernetes Service) is used to run the Quick-Bite application using Kubernetes.
@@ -833,6 +847,10 @@ The core Kubernetes components should be running.
 
 <a id="kubernetes-deployment"></a>
 
+![Kubernetes Verification](screenshots/08-eks-nodes.png)
+
+![Kubernetes System Pods](screenshots/09-system-pods.png)
+
 ## 🚀 Kubernetes Deployment
 
 Kubernetes Deployment is used to create and manage the Quick-Bite application Pods.
@@ -882,6 +900,12 @@ This command can be used to view the Deployment configuration, replica count, co
 
 
 <a id="kubernetes-service-and-loadbalancer"></a>
+
+![Deployment](screenshots/10-kubernetes-deployment-created.png)
+
+![Deployment Status](screenshots/11-kubernetes-deployment-status.png)
+
+![Application Pods](screenshots/12-quick-bite-pods.png)
 
 ## 🌐 Kubernetes Service and LoadBalancer
 
@@ -942,6 +966,8 @@ Open the LoadBalancer address in a web browser:
 The Quick-Bite application should now be accessible from the internet.
 
 <a id="final-verification"></a>
+
+![LoadBalancer](screenshots/13-kubernetes-service.png)
 
 ## ✅ Final Verification
 
@@ -1022,6 +1048,8 @@ The final deployment flow is:
 If all the above components are working, the complete DevOps deployment is successful.
 
 ---
+
+![Final Live Application](screenshots/14-live-quick-bite.png)
 
 ## 🎉 Deployment Complete
 
