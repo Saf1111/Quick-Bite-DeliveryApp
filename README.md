@@ -1,8 +1,21 @@
+<div align="center">
+
 # 🍔 Quick-Bite Delivery App
 
-<p align="center">
-  <strong>A production-style food delivery application deployed through an end-to-end DevOps pipeline.</strong>
+### 🚀 End-to-End DevOps Deployment Project
+
+**A production-style food delivery application deployed through a complete CI/CD and Kubernetes workflow.**
+
+<p>
+  <img src="https://img.shields.io/badge/Node.js-20+-green?logo=node.js" alt="Node.js">
+  <img src="https://img.shields.io/badge/Docker-Containerized-blue?logo=docker" alt="Docker">
+  <img src="https://img.shields.io/badge/Jenkins-CI%2FCD-red?logo=jenkins" alt="Jenkins">
+  <img src="https://img.shields.io/badge/Kubernetes-Orchestrated-326CE5?logo=kubernetes" alt="Kubernetes">
+  <img src="https://img.shields.io/badge/AWS-EKS-orange?logo=amazon-aws" alt="AWS EKS">
+  <img src="https://img.shields.io/badge/Region-ap--south--1-yellow?logo=amazon-aws" alt="AWS Mumbai">
 </p>
+
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Node.js-20+-green?logo=node.js" alt="Node.js">
