@@ -16,6 +16,7 @@
 </p>
 
 </div>
+
 <p align="center">
   <a href="#-project-overview">Overview</a> •
   <a href="#-technologies-used">Tech Stack</a> •
@@ -89,6 +90,7 @@ Kubernetes Pods
 LoadBalancer
    ↓
 Live Application
+```
 
 <a id="what-you-will-learn"></a>
 
