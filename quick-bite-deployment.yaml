@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quick-bite
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: quick-bite
+  template:
+    metadata:
+      labels:
+        app: quick-bite
+    spec:
+      containers:
+        - name: quick-bite
+          image: safwan112/quick-bite:latest
+          ports:
+            - containerPort: 3000
