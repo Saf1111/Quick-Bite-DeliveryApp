@@ -1,6 +1,60 @@
 # 🍔 Quick-Bite Delivery App
 
-A food delivery web application deployed using a complete DevOps workflow with GitHub, Jenkins, Docker, Docker Hub, AWS EKS, and Kubernetes.
+<p align="center">
+  <strong>A production-style food delivery application deployed through an end-to-end DevOps pipeline.</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-20+-green?logo=node.js" alt="Node.js">
+  <img src="https://img.shields.io/badge/Docker-Containerized-blue?logo=docker" alt="Docker">
+  <img src="https://img.shields.io/badge/Jenkins-CI%2FCD-red?logo=jenkins" alt="Jenkins">
+  <img src="https://img.shields.io/badge/Kubernetes-Orchestrated-326CE5?logo=kubernetes" alt="Kubernetes">
+  <img src="https://img.shields.io/badge/AWS-EKS-orange?logo=amazon-aws" alt="AWS EKS">
+  <img src="https://img.shields.io/badge/Region-ap--south--1-yellow?logo=amazon-aws" alt="AWS Mumbai">
+</p>
+
+<p align="center">
+  <a href="#-project-overview">Overview</a> •
+  <a href="#-technologies-used">Tech Stack</a> •
+  <a href="#-deployment-architecture">Architecture</a> •
+  <a href="#-project-structure">Structure</a> •
+  <a href="#-deployment">Deployment</a> •
+  <a href="#-final-verification">Verification</a>
+</p>
+
+---
+
+> **DevOps Portfolio Project**
+>
+> This project demonstrates the complete journey from source code to a publicly accessible application using **GitHub → Jenkins → Docker → Docker Hub → AWS EKS → Kubernetes → AWS LoadBalancer**.
+
+---
+
+## 📚 Table of Contents
+
+- [📌 Project Overview](#-project-overview)
+- [🎯 What You Will Learn](#-what-you-will-learn)
+- [🛠️ Technologies Used](#-technologies-used)
+- [🏗️ Deployment Architecture](#-deployment-architecture)
+- [📁 Project Structure](#-project-structure)
+- [📋 Prerequisites](#-prerequisites)
+- [☁️ AWS EC2 Setup](#️-aws-ec2-setup)
+- [🔐 IAM Role and AWS Permissions](#-iam-role-and-aws-permissions)
+- [☁️ AWS CLI Setup](#️-aws-cli-setup)
+- [🟢 Install Node.js and npm](#-install-nodejs-and-npm)
+- [🔗 Git and GitHub Setup](#-git-and-github-setup)
+- [🐳 Docker Setup](#-docker-setup)
+- [🧪 Test the Docker Container](#-test-the-docker-container)
+- [🐳 Docker Hub Setup](#-docker-hub-setup)
+- [🔧 Jenkins Setup](#-jenkins-setup)
+- [📄 Jenkinsfile](#-jenkinsfile)
+- [▶️ Jenkins Pipeline Execution](#️-jenkins-pipeline-execution)
+- [☸️ AWS EKS Cluster Setup](#️-aws-eks-cluster-setup)
+- [🚀 Kubernetes Deployment](#-kubernetes-deployment)
+- [🌐 Kubernetes Service and LoadBalancer](#-kubernetes-service-and-loadbalancer)
+- [✅ Final Verification](#-final-verification)
+
+---
 
 ## 📌 Project Overview
 
@@ -72,46 +126,46 @@ By completing this project, you will learn how to:
 ## 🏗️ Deployment Architecture
 
 ```text
-                    ┌──────────────┐
-                    │    GitHub    │
-                    │ Source Code  │
-                    └──────┬───────┘
-                           │
-                           ▼
-                    ┌──────────────┐
-                    │    Jenkins   │
-                    │ CI Pipeline  │
-                    └──────┬───────┘
-                           │
-                           ▼
-                    ┌──────────────┐
-                    │    Docker    │
-                    │ Build Image  │
-                    └──────┬───────┘
-                           │
-                           ▼
-                    ┌──────────────┐
-                    │  Docker Hub  │
-                    └──────┬───────┘
-                           │
-                           ▼
-              ┌─────────────────────────┐
-              │        AWS EKS          │
-              │   Kubernetes Cluster    │
-              │                         │
-              │   ┌─────┐    ┌─────┐    │
-              │   │Pod 1│    │Pod 2│    │
-              │   └─────┘    └─────┘    │
-              │          ▲              │
-              │          │              │
-              │   Kubernetes Service    │
-              └──────────┬──────────────┘
-                         │
-                         ▼
-                  AWS LoadBalancer
-                         │
-                         ▼
-                  Live Application
+                ┌──────────────┐
+                │    GitHub    │
+                │ Source Code  │
+                └──────┬───────┘
+                      │
+                      ▼
+                ┌──────────────┐
+                │    Jenkins   │
+                │ CI Pipeline  │
+                └──────┬───────┘
+                      │
+                      ▼
+                ┌──────────────┐
+                │    Docker    │
+                │ Build Image  │
+                └──────┬───────┘
+                      │
+                      ▼
+                ┌──────────────┐
+                │  Docker Hub  │
+                └──────┬───────┘
+                      │
+                      ▼
+            ┌─────────────────────────┐
+            │       AWS EKS        │
+            │   Kubernetes Cluster    │
+            │                    │
+            │   ┌─────┐    ┌─────┐    │
+            │   │Pod 1│    │Pod 2│    │
+            │   └─────┘    └─────┘    │
+            │        ▲            │
+            │        │            │
+            │   Kubernetes Service    │
+            └──────────┬──────────────┘
+                    │
+                    ▼
+               AWS LoadBalancer
+                    │
+                    ▼
+               Live Application
 
 ## 📁 Project Structure
 
@@ -137,17 +191,17 @@ Quick-Bite-DeliveryApp/
 ├── .gitignore
 └── README.md
 
-## Important Files
+## 📂 Important Files
 
-| File                         | Description                                   |
+| File                    | Description                            |
 | ---------------------------- | --------------------------------------------- |
-| `Dockerfile`                 | Instructions for building the Docker image    |
-| `Jenkinsfile`                | Defines the Jenkins CI pipeline               |
-| `quick-bite-deployment.yaml` | Kubernetes Deployment configuration           |
+| `Dockerfile`              | Instructions for building the Docker image    |
+| `Jenkinsfile`             | Defines the Jenkins CI pipeline            |
+| `quick-bite-deployment.yaml` | Kubernetes Deployment configuration         |
 | `quick-bite-service.yaml`    | Kubernetes LoadBalancer Service configuration |
-| `package.json`               | Project dependencies and scripts              |
-| `server.ts`                  | Application server                            |
-| `README.md`                  | Project documentation                         |
+| `package.json`            | Project dependencies and scripts            |
+| `server.ts`               | Application server                       |
+| `README.md`               | Project documentation                    |
 
 ## 📋 Prerequisites
 
@@ -570,63 +624,63 @@ The pipeline performs the following stages:
 The Jenkinsfile used in this project is:
 
     pipeline {
-        agent any
+       agent any
 
-        stages {
-            stage('Checkout') {
-                steps {
-                    checkout scm
-                }
-            }
+       stages {
+          stage('Checkout') {
+             steps {
+                checkout scm
+             }
+          }
 
-            stage('Install Dependencies') {
-                steps {
-                    sh 'npm ci'
-                }
-            }
+          stage('Install Dependencies') {
+             steps {
+                sh 'npm ci'
+             }
+          }
 
-            stage('Build Application') {
-                steps {
-                    sh 'npm run build'
-                }
-            }
+          stage('Build Application') {
+             steps {
+                sh 'npm run build'
+             }
+          }
 
-            stage('Docker Build') {
-                steps {
-                    sh 'docker build -t quick-bite:latest .'
-                }
-            }
+          stage('Docker Build') {
+             steps {
+                sh 'docker build -t quick-bite:latest .'
+             }
+          }
 
-            stage('Deploy') {
-                steps {
-                    sh '''
-                        docker stop quick-bite || true
-                        docker rm quick-bite || true
-                        docker run -d \
-                          --name quick-bite \
-                          -p 3000:3000 \
-                          --restart unless-stopped \
-                          quick-bite:latest
-                    '''
-                }
-            }
-        }
+          stage('Deploy') {
+             steps {
+                sh '''
+                    docker stop quick-bite || true
+                    docker rm quick-bite || true
+                    docker run -d \
+                     --name quick-bite \
+                     -p 3000:3000 \
+                     --restart unless-stopped \
+                     quick-bite:latest
+                '''
+             }
+          }
+       }
     }
 
 ### Pipeline Flow
 
     GitHub
-       ↓
+      ↓
     Checkout
-       ↓
+      ↓
     npm ci
-       ↓
+      ↓
     npm run build
-       ↓
+      ↓
     Docker Build
-       ↓
+      ↓
     Docker Container
-       ↓
+      ↓
     Application Running
 
 ## ▶️ Jenkins Pipeline Execution
@@ -652,13 +706,13 @@ The console will display each pipeline stage and its output.
 The expected stages are:
 
     Checkout
-        ↓
+       ↓
     Install Dependencies
-        ↓
+       ↓
     Build Application
-        ↓
+       ↓
     Docker Build
-        ↓
+       ↓
     Deploy
 
 ### 3. Verify the Build
@@ -895,23 +949,39 @@ The Quick-Bite application should load successfully.
 The final deployment flow is:
 
     GitHub
-       ↓
+      ↓
     Jenkins
-       ↓
+      ↓
     Application Build
-       ↓
+      ↓
     Docker Image
-       ↓
+      ↓
     Docker Hub
-       ↓
+      ↓
     AWS EKS
-       ↓
+      ↓
     Kubernetes Deployment
-       ↓
+      ↓
     Kubernetes Pods
-       ↓
+      ↓
     LoadBalancer
-       ↓
+      ↓
     Live Quick-Bite Application
 
 If all the above components are working, the complete DevOps deployment is successful.
+
+---
+
+## 🎉 Deployment Complete
+
+If the checks above are successful, the **Quick-Bite Delivery App** has completed the full DevOps journey:
+
+**Source Code → CI Pipeline → Container → Registry → Kubernetes → Cloud LoadBalancer → Live Application**
+
+> ⭐ If this project helped you learn DevOps, consider starring the repository and using it as a foundation for your own CI/CD projects.
+
+---
+
+<p align="center">
+  <strong>Built with ❤️ while learning DevOps, Docker, Kubernetes & AWS</strong>
+</p>
