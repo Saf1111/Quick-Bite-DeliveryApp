@@ -143,42 +143,42 @@ By completing this project, you will learn how to:
                 │    GitHub    │
                 │ Source Code  │
                 └──────┬───────┘
-                      │
-                      ▼
+                       │
+                       ▼
                 ┌──────────────┐
                 │    Jenkins   │
                 │ CI Pipeline  │
                 └──────┬───────┘
-                      │
-                      ▼
+                       │
+                       ▼
                 ┌──────────────┐
                 │    Docker    │
                 │ Build Image  │
                 └──────┬───────┘
-                      │
-                      ▼
+                       │
+                       ▼
                 ┌──────────────┐
                 │  Docker Hub  │
                 └──────┬───────┘
-                      │
-                      ▼
+                       │
+                       ▼
             ┌─────────────────────────┐
-            │       AWS EKS        │
+            │       AWS EKS           │
             │   Kubernetes Cluster    │
-            │                    │
+            │                         │
             │   ┌─────┐    ┌─────┐    │
             │   │Pod 1│    │Pod 2│    │
             │   └─────┘    └─────┘    │
-            │        ▲            │
-            │        │            │
+            │      ▲          ▲       │
+            │      │          │       │
             │   Kubernetes Service    │
             └──────────┬──────────────┘
-                    │
-                    ▼
+                       │
+                       ▼
                AWS LoadBalancer
-                    │
-                    ▼
-               Live Application
+                       │
+                       ▼
+                Live Application
 
 <a id="project-structure"></a>
 
