@@ -18,6 +18,15 @@
 </div>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Node.js-20+-green?logo=node.js" alt="Node.js">
+  <img src="https://img.shields.io/badge/Docker-Containerized-blue?logo=docker" alt="Docker">
+  <img src="https://img.shields.io/badge/Jenkins-CI%2FCD-red?logo=jenkins" alt="Jenkins">
+  <img src="https://img.shields.io/badge/Kubernetes-Orchestrated-326CE5?logo=kubernetes" alt="Kubernetes">
+  <img src="https://img.shields.io/badge/AWS-EKS-orange?logo=amazon-aws" alt="AWS EKS">
+  <img src="https://img.shields.io/badge/Region-ap--south--1-yellow?logo=amazon-aws" alt="AWS Mumbai">
+</p>
+
+<p align="center">
   <a href="#-project-overview">Overview</a> •
   <a href="#-technologies-used">Tech Stack</a> •
   <a href="#-deployment-architecture">Architecture</a> •
@@ -36,29 +45,31 @@
 
 ## 📚 Table of Contents
 
-- [📌 Project Overview](#-project-overview)
-- [🎯 What You Will Learn](#-what-you-will-learn)
-- [🛠️ Technologies Used](#-technologies-used)
-- [🏗️ Deployment Architecture](#-deployment-architecture)
-- [📁 Project Structure](#-project-structure)
-- [📋 Prerequisites](#-prerequisites)
-- [☁️ AWS EC2 Setup](#️-aws-ec2-setup)
-- [🔐 IAM Role and AWS Permissions](#-iam-role-and-aws-permissions)
-- [☁️ AWS CLI Setup](#️-aws-cli-setup)
-- [🟢 Install Node.js and npm](#-install-nodejs-and-npm)
-- [🔗 Git and GitHub Setup](#-git-and-github-setup)
-- [🐳 Docker Setup](#-docker-setup)
-- [🧪 Test the Docker Container](#-test-the-docker-container)
-- [🐳 Docker Hub Setup](#-docker-hub-setup)
-- [🔧 Jenkins Setup](#-jenkins-setup)
-- [📄 Jenkinsfile](#-jenkinsfile)
-- [▶️ Jenkins Pipeline Execution](#️-jenkins-pipeline-execution)
-- [☸️ AWS EKS Cluster Setup](#️-aws-eks-cluster-setup)
-- [🚀 Kubernetes Deployment](#-kubernetes-deployment)
-- [🌐 Kubernetes Service and LoadBalancer](#-kubernetes-service-and-loadbalancer)
-- [✅ Final Verification](#-final-verification)
+- [📌 Project Overview](#project-overview)
+- [🎯 What You Will Learn](#what-you-will-learn)
+- [🛠️ Technologies Used](#technologies-used)
+- [🏗️ Deployment Architecture](#deployment-architecture)
+- [📁 Project Structure](#project-structure)
+- [📋 Prerequisites](#prerequisites)
+- [☁️ AWS EC2 Setup](#aws-ec2-setup)
+- [🔐 IAM Role and AWS Permissions](#iam-role-and-aws-permissions)
+- [☁️ AWS CLI Setup](#aws-cli-setup)
+- [🟢 Install Node.js and npm](#install-nodejs-and-npm)
+- [🔗 Git and GitHub Setup](#git-and-github-setup)
+- [🐳 Docker Setup](#docker-setup)
+- [🧪 Test the Docker Container](#test-the-docker-container)
+- [🐳 Docker Hub Setup](#docker-hub-setup)
+- [🔧 Jenkins Setup](#jenkins-setup)
+- [📄 Jenkinsfile](#jenkinsfile)
+- [▶️ Jenkins Pipeline Execution](#jenkins-pipeline-execution)
+- [☸️ AWS EKS Cluster Setup](#aws-eks-cluster-setup)
+- [🚀 Kubernetes Deployment](#kubernetes-deployment)
+- [🌐 Kubernetes Service and LoadBalancer](#kubernetes-service-and-loadbalancer)
+- [✅ Final Verification](#final-verification)
 
 ---
+
+<a id="project-overview"></a>
 
 ## 📌 Project Overview
 
@@ -89,6 +100,8 @@ LoadBalancer
    ↓
 Live Application
 
+<a id="what-you-will-learn"></a>
+
 ## 🎯 What You Will Learn
 
 By completing this project, you will learn how to:
@@ -108,6 +121,8 @@ By completing this project, you will learn how to:
 - Verify and troubleshoot a Kubernetes deployment
 - Understand the basic DevOps deployment workflow
 
+<a id="technologies-used"></a>
+
 ## 🛠️ Technologies Used
 
 | Technology | Purpose |
@@ -126,6 +141,8 @@ By completing this project, you will learn how to:
 | kubectl | Kubernetes command-line tool |
 | eksctl | EKS cluster management |
 | AWS LoadBalancer | External application access |
+
+<a id="deployment-architecture"></a>
 
 ## 🏗️ Deployment Architecture
 
@@ -171,6 +188,8 @@ By completing this project, you will learn how to:
                     ▼
                Live Application
 
+<a id="project-structure"></a>
+
 ## 📁 Project Structure
 
 ```text
@@ -207,6 +226,8 @@ Quick-Bite-DeliveryApp/
 | `server.ts`               | Application server                       |
 | `README.md`               | Project documentation                    |
 
+<a id="prerequisites"></a>
+
 ## 📋 Prerequisites
 
 Before starting this project, make sure you have:
@@ -237,6 +258,8 @@ The following tools are used in this project:
 This project uses the AWS Mumbai region:
 
     ap-south-1
+
+<a id="aws-ec2-setup"></a>
 
 ## ☁️ AWS EC2 Setup
 
@@ -279,6 +302,8 @@ Check the operating system:
 Check the system information:
 
     uname -a
+
+<a id="iam-role-and-aws-permissions"></a>
 
 ## 🔐 IAM Role and AWS Permissions
 
@@ -330,6 +355,8 @@ The `Arn` should show the IAM role attached to the EC2 instance.
 
 > Note: AWS Access Key ID and Secret Access Key are not required when the EC2 instance uses an IAM Role.
 
+<a id="aws-cli-setup"></a>
+
 ## ☁️ AWS CLI Setup
 
 AWS CLI is used to communicate with AWS services from the EC2 server.
@@ -362,6 +389,8 @@ You can check the current AWS configuration with:
 
 > Note: When an IAM Role is attached to the EC2 instance, AWS access keys do not need to be configured manually.
 
+<a id="install-nodejs-and-npm"></a>
+
 ## 🟢 Install Node.js and npm
 
 Node.js and npm are required to install the project dependencies and build the application.
@@ -385,6 +414,8 @@ Go to the project directory:
 Check the project files:
 
     ls -la
+
+<a id="git-and-github-setup"></a>
 
 ## 🔗 Git and GitHub Setup
 
@@ -419,6 +450,8 @@ The remote repository should point to the Quick-Bite GitHub repository.
 Before working with the project, pull the latest changes:
 
     git pull origin main
+
+<a id="docker-setup"></a>
 
 ## 🐳 Docker Setup
 
@@ -472,6 +505,8 @@ The Quick-Bite image should appear with the following name:
 
     quick-bite    latest
 
+<a id="test-the-docker-container"></a>
+
 ## 🧪 Test the Docker Container
 
 Before deploying the application to Kubernetes, test the Docker image locally on the EC2 instance.
@@ -508,6 +543,8 @@ After testing:
 
     docker rm quick-bite
 
+<a id="docker-hub-setup"></a>
+
 ## 🐳 Docker Hub Setup
 
 Docker Hub is used as the container image registry for this project.
@@ -543,6 +580,8 @@ Example:
 Open your Docker Hub repository and verify that the `quick-bite:latest` image is available.
 
 The Kubernetes Deployment will use this Docker Hub image later.
+
+<a id="jenkins-setup"></a>
 
 ## 🔧 Jenkins Setup
 
@@ -612,6 +651,8 @@ Click:
 Jenkins will checkout the repository and execute the stages defined in the `Jenkinsfile`.
 
 The pipeline should complete successfully before moving to the Kubernetes deployment.
+
+<a id="jenkinsfile"></a>
 
 ## 📄 Jenkinsfile
 
@@ -687,6 +728,8 @@ The Jenkinsfile used in this project is:
       ↓
     Application Running
 
+<a id="jenkins-pipeline-execution"></a>
+
 ## ▶️ Jenkins Pipeline Execution
 
 After configuring the Jenkins Pipeline, run the job from the Jenkins dashboard.
@@ -741,6 +784,8 @@ The `quick-bite` container should be running.
 
 The application should return a response from the running container.
 
+<a id="aws-eks-cluster-setup"></a>
+
 ## ☸️ AWS EKS Cluster Setup
 
 Amazon EKS (Elastic Kubernetes Service) is used to run the Quick-Bite application using Kubernetes.
@@ -790,6 +835,8 @@ The nodes should show:
 
 The core Kubernetes components should be running.
 
+<a id="kubernetes-deployment"></a>
+
 ## 🚀 Kubernetes Deployment
 
 Kubernetes Deployment is used to create and manage the Quick-Bite application Pods.
@@ -837,6 +884,8 @@ Both Pods should eventually show:
 
 This command can be used to view the Deployment configuration, replica count, container image, and events.
 
+
+<a id="kubernetes-service-and-loadbalancer"></a>
 
 ## 🌐 Kubernetes Service and LoadBalancer
 
@@ -895,6 +944,8 @@ Open the LoadBalancer address in a web browser:
     http://<EXTERNAL-LOADBALANCER-DNS>
 
 The Quick-Bite application should now be accessible from the internet.
+
+<a id="final-verification"></a>
 
 ## ✅ Final Verification
 
